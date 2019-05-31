@@ -1,0 +1,628 @@
+{
+  "info": {
+    "_postman_id": "f0cfd3f4-aa31-4a50-b341-e75db7aa288c",
+    "name": "java-rest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Artist Rest Requests",
+      "item": [
+        {
+          "name": "Get All Artists",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/artists",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "artists"
+              ]
+            },
+            "description": "Get all Artists"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Artist",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"id\": 4,\n\t\"createdDate\": null,\n\t\"lastModifiedDate\": null,\n\t\"name\": \"Drake\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/artist",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "artist"
+              ]
+            },
+            "description": "Adding Artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Artist Copy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n        \"id\": 4,\n        \"createdDate\": null,\n        \"lastModifiedDate\": null,\n        \"name\": \"Drake\",\n        \"albums\": [\n            {\n                \"id\": 5,\n                \"createdDate\": null,\n                \"lastModifiedDate\": null,\n                \"name\": \"Scorpion\",\n                \"yearReleased\": 2018,\n                \"songs\": [\n                    {\n                        \"id\": 41,\n                        \"createdDate\": null,\n                        \"lastModifiedDate\": null,\n                        \"track\": 1,\n                        \"name\": \"Survival\"\n                    },\n                    {\n                        \"id\": 42,\n                        \"createdDate\": null,\n                        \"lastModifiedDate\": null,\n                        \"track\": 2,\n                        \"name\": \"Non Stop\"\n                    },\n                    {\n                        \"id\": 43,\n                        \"createdDate\": null,\n                        \"lastModifiedDate\": null,\n                        \"track\": 3,\n                        \"name\": \"Elevate\"\n                    }\n                ]\n            }\n        ]\n    }"
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/artist",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "artist"
+              ]
+            },
+            "description": "Adding Artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Artist",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"id\": \"1\",\n\t\"name\": \"Muse 1\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/artist",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "artist"
+              ]
+            },
+            "description": "Updating the artist information\t\t"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Artist",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/artist/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "artist",
+                "1"
+              ]
+            },
+            "description": "Deleting the artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Artist",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/artist/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "artist",
+                "1"
+              ]
+            },
+            "description": "Get Specific artist\t"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Artist not found",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/artist/40",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "artist",
+                "40"
+              ]
+            },
+            "description": "Get Specific artist\t"
+          },
+          "response": []
+        }
+      ],
+      "description": "Contains the Artist REST API call samples.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "8210ff7a-4ab6-4c23-8cc2-bb3ec2bfe860",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "8bb10156-e01f-4779-9f30-b6fc19b9bc8e",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Songs Rest Requests",
+      "item": [
+        {
+          "name": "Get All Songs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/songs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "songs"
+              ]
+            },
+            "description": "Get all Artists"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Song",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 41,\n    \"createdDate\": null,\n    \"lastModifiedDate\": null,\n    \"track\": 1,\n    \"name\": \"Survival\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/song/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "song",
+                "5"
+              ]
+            },
+            "description": "Adding Artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Song",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"id\": \"1\",\n\t\"name\": \"Muse 1\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/song",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "song"
+              ]
+            },
+            "description": "Updating the artist information\t\t"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Song",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/song/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "song",
+                "1"
+              ]
+            },
+            "description": "Deleting the artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Song Not found",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/song/444",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "song",
+                "444"
+              ]
+            },
+            "description": "Deleting the artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Song",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/song/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "song",
+                "1"
+              ]
+            },
+            "description": "Get Specific artist\t"
+          },
+          "response": []
+        }
+      ],
+      "description": "Contains the songs REST API call samples.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "8210ff7a-4ab6-4c23-8cc2-bb3ec2bfe860",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "8bb10156-e01f-4779-9f30-b6fc19b9bc8e",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Album Rest Requests",
+      "item": [
+        {
+          "name": "Get All Albums",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/albums",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "albums"
+              ]
+            },
+            "description": "Get all Artists"
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Albums By Artist",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/albums/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "albums",
+                "1"
+              ]
+            },
+            "description": "Get all Artists"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Album",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 5,\n    \"createdDate\": null,\n    \"lastModifiedDate\": null,\n    \"name\": \"Scorpion\",\n    \"yearReleased\": 2018\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/album/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "album",
+                "4"
+              ]
+            },
+            "description": "Adding Artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Album",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"id\": \"1\",\n\t\"name\": \"Muse 1\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/album",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "album"
+              ]
+            },
+            "description": "Updating the artist information\t\t"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Album",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/album/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "album",
+                "1"
+              ]
+            },
+            "description": "Deleting the artist"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Album",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/album/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "album",
+                "1"
+              ]
+            },
+            "description": "Get Specific artist\t"
+          },
+          "response": []
+        }
+      ],
+      "description": "Contains the Albums REST API call samples.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "37a45fa4-a929-423b-a590-020a5bd016a6",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "5cb7294f-40c9-49c6-9770-c60a35dfc0d0",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
